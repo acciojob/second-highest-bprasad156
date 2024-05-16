@@ -10,18 +10,19 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			let first=-1000000000;
-			let second=-100000000;
-			for(let i=0;i<=arr.length;i++){
-				if(arr[i]>first){
+					let first=-Infinity;
+			let second=-Infinity;
+			for(let  t of arr){
+				if(t>first){
 					second=first;
-					first=arr[i];
+					first=t;
 				}
-				else if(arr[i]<second){
-					first=arr[i];
+				else if(t>second&&t!=first){
+					 second=t;
 				}
 			}
-			return  second;
+			return  first;
+			
 			
 			
 			
